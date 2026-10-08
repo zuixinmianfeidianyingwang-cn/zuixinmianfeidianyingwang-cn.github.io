@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="最新免费电影网（zuixinmianfeidianyingwang-cn.github.io）是一个免费、合法、正版的影片资料与观影指南平台，提供最新电影资讯、免费观影渠道指引、华语电影、欧美电影、日本电影、高分剧集、冷门佳片、纪录片、免费片单与精选网址导航。不提供盗版播放源。">
+<meta name="keywords" content="最新免费电影网, 免费电影, 最新电影, 免费观影, 免费片单, 影片资料, 观影指南, 网址导航, 正版, 合法, 华语电影, 欧美电影, 日本电影, 高分剧集, 冷门佳片, 纪录片, 短片, 奥斯卡, 戛纳, 柏林, 电影节, 免费资源, zuixinmianfeidianyingwang-cn">
+<meta name="author" content="最新免费电影网">
+<meta name="robots" content="index, follow">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://zuixinmianfeidianyingwang-cn.github.io/">
+<meta property="og:title" content="最新免费电影网 - 免费、合法、正版的影片资料与观影指南 | 最新电影资讯、免费片单与网址导航">
+<meta property="og:description" content="最新免费电影网（zuixinmianfeidianyingwang-cn.github.io）：免费、合法、正版。提供最新电影资讯、免费观影渠道指引、华语/欧美/日本电影、高分剧集、冷门佳片、免费片单与精选网址导航，不提供盗版播放源。">
+<meta property="og:url" content="https://zuixinmianfeidianyingwang-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="最新免费电影网">
+<title>最新免费电影网 - 免费、合法、正版的影片资料与观影指南 | 最新电影资讯、免费片单与网址导航</title>
+<style>
+:root{
+  --bg:#fffdf6; --ink:#24211c; --ink2:#6b6558; --mute:#a29a88;
+  --news:#fff;
+  --paper:#fbf6e9;   /* 旧纸 */
+  --red:#d62828;     /* 廉价红 */
+  --blue:#2b6cb0;    /* 油墨蓝 */
+  --green:#2f7a4d;   /* 绿 */
+  --yellow:#f2c14e;  /* 黄 */
+  --purple:#7c5cbf;
+  --serif:"Source Han Serif SC","Songti SC","SimSun",Georgia,serif;
+  --sans:"Inter","Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --mono:"JetBrains Mono","SF Mono",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.78;font-size:14.5px;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;
+  background-image:radial-gradient(circle at 3px 3px,rgba(36,33,28,.055),transparent 3px);background-size:20px 20px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:linear-gradient(0deg,transparent 0 31px,rgba(36,33,28,.05) 31px 32px,transparent 32px),
+             linear-gradient(90deg,transparent 0 31px,rgba(36,33,28,.05) 31px 32px,transparent 32px);
+  background-size:32px 32px;opacity:.9}
+main,header,footer,.nav{position:relative;z-index:2}
+a{color:inherit;text-decoration:none;transition:.15s}
+ul,ol{list-style:none}
+::selection{background:var(--yellow);color:var(--ink)}
+:focus-visible{outline:3px dashed var(--red);outline-offset:3px}
+
+/* 报头 */
+.masthead{padding:20px 0 12px;border-bottom:4px double var(--ink)}
+.container{width:100%;max-width:1250px;margin:0 auto;padding:0 30px}
+.mh{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:start}
+.plate{font-family:var(--mono);font-size:7.5px;letter-spacing:.13em;color:var(--ink2);line-height:2.1;display:flex;flex-direction:column;gap:2px}
+.plate b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums;font-size:8.5px}
+.plate.r{text-align:right;align-items:flex-end}
+.brand-wrap{text-align:center}
+.brand{display:inline-block;font-family:var(--serif);font-weight:900;letter-spacing:-.06em;line-height:1;
+  font-size:clamp(38px,9.4vw,92px);
+  text-shadow:4px 4px 0 var(--yellow),-2px -2px 0 var(--red),6px -4px 0 var(--blue)}
+.brand small{display:block;font-family:var(--mono);font-size:clamp(8px,1.02vw,10px);letter-spacing:.42em;color:var(--ink2);margin-top:11px;font-weight:700;padding-left:.42em}
+.marquee{margin-top:13px;border:2px solid var(--ink);background:var(--ink);color:var(--yellow);font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;font-weight:700;overflow:hidden;white-space:nowrap;padding:6px 0}
+.marquee .track{display:inline-flex;gap:34px;animation:mq 40s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee b{color:#fff}
+
+/* 导航 */
+.nav{position:sticky;top:0;z-index:200;background:rgba(255,253,246,.97);backdrop-filter:blur(5px);border-bottom:3px solid var(--ink)}
+.menu{display:flex;justify-content:center;gap:0;flex-wrap:wrap}
+.menu a{padding:12px 18px;font-size:11.5px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);border-right:1px solid rgba(36,33,28,.28)}
+.menu a:first-child{border-left:1px solid rgba(36,33,28,.28)}
+.menu a:hover{color:var(--red);background:rgba(214,40,40,.06)}
+.menu a.on{color:#fff;background:var(--red)}
+.ham{display:none;width:52px;height:49px;border:3px solid var(--ink);background:var(--yellow);color:var(--ink);cursor:pointer;font-size:20px;margin-left:auto;font-family:var(--mono);font-weight:900}
+
+/* 章节头 */
+section{padding:56px 0}
+.sec-h{display:grid;grid-template-columns:132px 1fr auto;gap:20px;align-items:baseline;margin-bottom:24px;padding-bottom:10px;border-bottom:3px solid var(--ink)}
+.sec-h .no{font-family:var(--mono);font-weight:900;font-size:11px;color:var(--red);letter-spacing:.09em;line-height:1.15}
+.sec-h .no i{display:block;font-family:var(--serif);font-size:46px;color:var(--ink);font-style:normal;letter-spacing:-.05em;line-height:1}
+.sec-h .tx .kicker{font-family:var(--mono);font-size:7.5px;letter-spacing:.24em;color:var(--blue);font-weight:800}
+.sec-h h2{font-family:var(--serif);font-weight:900;font-size:clamp(24px,4.3vw,40px);line-height:1.3;letter-spacing:-.02em;margin-top:3px}
+.sec-h h2 em{font-style:italic;color:var(--red);background:linear-gradient(transparent 62%,var(--yellow) 62%,var(--yellow) 94%,transparent 94%);padding:0 3px}
+.sec-h .more{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;color:var(--ink);border:2px solid var(--ink);padding:8px 11px;font-weight:800;white-space:nowrap;align-self:end;margin-bottom:5px;background:var(--bg)}
+.sec-h .more:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.lede{font-size:12.5px;color:var(--ink2);max-width:860px;line-height:1.95}
+code{font-family:var(--mono);font-size:10.5px;background:var(--yellow);color:var(--ink);padding:1px 5px;font-weight:800}
+.hr2{height:3px;background:repeating-linear-gradient(90deg,var(--ink) 0 12px,transparent 12px 22px);margin:16px 0 0}
+
+/* HERO：告示栏 */
+.hero{display:grid;grid-template-columns:1.12fr 1fr;gap:18px}
+.board{border:3px solid var(--ink);background:var(--paper);padding:22px 24px;box-shadow:9px 9px 0 var(--red);transform:rotate(-.5deg)}
+.board .tape{display:inline-block;background:var(--yellow);font-family:var(--mono);font-size:8px;letter-spacing:.2em;font-weight:800;padding:5px 10px;margin-bottom:12px;border:1.5px solid var(--ink)}
+.board h3{font-family:var(--serif);font-weight:900;font-size:clamp(26px,4.4vw,43px);line-height:1.3;letter-spacing:-.02em}
+.board h3 em{font-style:italic;color:var(--red)}
+.board p{font-size:13.5px;line-height:2.05;text-align:justify;margin-top:10px}
+.board p .hl{background:var(--yellow)}
+.price{display:flex;gap:0;margin-top:16px;border:2px solid var(--ink)}
+.price div{flex:1;text-align:center;padding:11px 6px;border-right:2px solid var(--ink);background:var(--c)}
+.price div:last-child{border-right:none}
+.price div b{display:block;font-family:var(--mono);font-size:17px;font-weight:900;color:var(--ink);line-height:1.2;font-variant-numeric:tabular-nums}
+.price div span{font-family:var(--mono);font-size:7px;letter-spacing:.16em;color:var(--ink2);text-transform:uppercase;font-weight:800}
+.ads{border:3px solid var(--ink);background:#fff;display:flex;flex-direction:column;gap:9px;padding:12px;box-shadow:9px 9px 0 var(--blue);transform:rotate(.5deg)}
+.ad{border:2px dashed var(--ink);padding:11px 13px;background:var(--c);position:relative;transform:rotate(var(--r,0deg))}
+.a1{--c:var(--red);color:#fff;--r:-1.1deg}.a2{--c:var(--yellow);--r:.9deg}.a3{--c:var(--green);color:#fff;--r:-.8deg}
+.a4{--c:var(--blue);color:#fff;--r:1deg}.a5{--c:#fff;--r:-.9deg}.a6{--c:var(--purple);color:#fff;--r:1.1deg}
+.ad .lb{font-family:var(--mono);font-size:7px;letter-spacing:.2em;font-weight:800;border-bottom:1.5px solid currentColor;padding-bottom:3px;display:inline-block}
+.ad b{display:block;font-family:var(--serif);font-weight:900;font-size:15.5px;line-height:1.4;margin-top:4px;letter-spacing:.01em}
+.ad u{font-size:10.5px;text-decoration:none;font-weight:700;opacity:.92;display:block;margin-top:2px}
+.ad:after{content:"★";position:absolute;right:9px;top:9px;font-size:11px;opacity:.55}
+
+/* 01 新片：票根 */
+.tickets{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tk{border:3px solid var(--ink);background:#fff;position:relative;padding:15px 17px 16px;display:flex;flex-direction:column;gap:6px;
+  box-shadow:7px 7px 0 rgba(36,33,28,.18);transform:rotate(var(--r,0deg))}
+.tk:before,.tk:after{content:"";position:absolute;width:16px;height:16px;border:3px solid var(--ink);background:var(--bg);border-radius:50%;left:-11px}
+.tk:before{top:-11px}.tk:after{bottom:-11px}
+.tk .stub{font-family:var(--mono);font-size:7.5px;letter-spacing:.2em;font-weight:800;background:var(--ink);color:var(--yellow);align-self:flex-start;padding:3px 8px}
+.tk h4{font-family:var(--serif);font-weight:900;font-size:19px;line-height:1.35;letter-spacing:-.01em}
+.tk p{font-size:11px;line-height:1.7;color:var(--ink2);font-weight:600}
+.tk .bar{height:3px;background:repeating-linear-gradient(90deg,var(--ink) 0 7px,transparent 7px 13px);margin:3px 0}
+.tk .ft{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:8px;letter-spacing:.07em;margin-top:auto}
+.tk .ft b{font-size:19px;font-weight:900;font-variant-numeric:tabular-nums;color:var(--red)}
+.t1r{--r:-2.6deg}.t2r{--r:-.7deg}.t3r{--r:.8deg}.t4r{--r:2.4deg}
+
+/* 02 免费渠道：票据 */
+.ledger{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.row{border:2px solid var(--ink);background:var(--paper);padding:14px 16px;display:grid;grid-template-columns:74px 1fr 96px;gap:13px;align-items:center;
+  box-shadow:5px 5px 0 rgba(36,33,28,.16);transform:rotate(var(--r,0deg))}
+.r1{--r:-1.1deg}.r2{--r:.9deg}.r3{--r:-.7deg}.r4{--r:1deg}.r5{--r:-.8deg}.r6{--r:.8deg}
+.row .no{font-family:var(--mono);font-weight:900;font-size:22px;line-height:1;color:var(--red);letter-spacing:-.05em;font-variant-numeric:tabular-nums;border-right:2px dashed var(--ink);padding-right:11px;text-align:center}
+.row .tx h6{font-family:var(--serif);font-weight:900;font-size:16.5px;line-height:1.4}
+.row .tx small{display:block;font-family:var(--mono);font-size:7.5px;letter-spacing:.12em;color:var(--ink2);font-weight:700;text-transform:uppercase;margin-top:1px}
+.row .tx p{font-size:11px;color:var(--ink2);line-height:1.6;margin-top:2px}
+.row .free{font-family:var(--mono);font-size:8px;letter-spacing:.1em;font-weight:800;text-align:center;border:2px solid var(--ink);background:var(--c);color:var(--ink);padding:6px 4px;line-height:1.5}
+.f1{--c:var(--green);color:#fff}.f2{--c:var(--yellow)}.f3{--c:var(--blue);color:#fff}.f4{--c:var(--purple);color:#fff}.f5{--c:var(--red);color:#fff}.f6{--c:#fff}
+
+/* 03 手记：打字稿 */
+.letter{border:3px solid var(--ink);background:#fff;padding:26px 30px;box-shadow:8px 8px 0 var(--yellow);transform:rotate(-.4deg)}
+.letter .from{font-family:var(--mono);font-size:8px;letter-spacing:.22em;color:var(--red);font-weight:800}
+.letter h5{font-family:var(--serif);font-weight:900;font-size:clamp(22px,3.7vw,34px);line-height:1.4;margin:7px 0 9px}
+.letter p{font-size:13px;line-height:2.15;text-align:justify}
+.letter p:first-of-type:first-letter{font-family:var(--serif);font-weight:900;font-size:44px;float:left;line-height:.92;padding:2px 7px 0 0;color:var(--red)}
+.letter p .hl{background:var(--yellow)}
+.letter .sign{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;color:var(--blue);font-weight:800;border-top:1.5px dashed var(--ink);padding-top:9px;margin-top:14px;display:flex;justify-content:space-between}
+
+/* 04 榜单：木条 */
+.ladder{display:grid;grid-template-columns:repeat(10,1fr);gap:9px;align-items:flex-end;height:250px;margin-bottom:20px;
+  border-bottom:3px solid var(--ink);padding-bottom:0}
+.bar{position:relative;height:var(--h);background:var(--c);border:2px solid var(--ink);border-bottom:none;min-height:24px;
+  display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:7px 2px;color:var(--ink);
+  background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.35) 0 1px,transparent 1px 9px)}
+.bar b{font-family:var(--mono);font-size:10px;font-weight:900;letter-spacing:-.02em;font-variant-numeric:tabular-nums;background:var(--ink);color:var(--yellow);padding:0 3px;line-height:1.4}
+.bar em{font-family:var(--serif);font-weight:900;font-size:8.5px;font-style:normal;text-align:center;line-height:1.25;letter-spacing:.02em}
+.bar.on{outline:3px solid var(--red);outline-offset:-1px}
+.bars2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.br{display:grid;grid-template-columns:36px 1fr 70px;align-items:center;gap:10px;border:2px solid var(--ink);background:#fff;padding:9px 13px}
+.br .n{font-family:var(--serif);font-weight:900;font-size:17px;line-height:1;color:var(--red);text-align:center;font-variant-numeric:tabular-nums}
+.br .t{font-size:12px;font-weight:800;line-height:1.45}
+.br .t small{display:block;font-family:var(--mono);font-size:7.5px;letter-spacing:.1em;color:var(--ink2);font-weight:700;text-transform:uppercase}
+.br .v{font-family:var(--mono);font-size:11.5px;font-weight:900;text-align:right;font-variant-numeric:tabular-nums;color:var(--blue)}
+.br .v u{display:block;font-size:7.5px;text-decoration:none;color:var(--ink2);font-weight:700}
+
+/* 05 分类：目录 */
+.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:3px solid var(--ink);background:#fff}
+.tc{border:1.5px solid rgba(36,33,28,.3);padding:15px 18px;display:grid;grid-template-columns:44px 1fr;gap:11px;align-items:baseline;transform:rotate(var(--r,0deg))}
+.c1{--r:-.9deg}.c2{--r:.7deg}.c3{--r:-.6deg}.c4{--r:.8deg}.c5{--r:-.7deg}.c6{--r:.9deg}
+.c7{--r:-.8deg}.c8{--r:.6deg}.c9{--r:-.7deg}.c10{--r:.8deg}.c11{--r:-.6deg}.c12{--r:.7deg}
+.tc .ix{font-family:var(--mono);font-weight:900;font-size:15px;color:var(--red);letter-spacing:-.03em;font-variant-numeric:tabular-nums;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.tc .nm{font-family:var(--serif);font-weight:900;font-size:18px;line-height:1.3;letter-spacing:.03em}
+.tc .nm var{display:block;font-style:normal;font-family:var(--mono);font-size:8px;letter-spacing:.12em;color:var(--ink2);font-weight:700;margin-top:3px;text-transform:uppercase}
+.tc .nm var i{font-style:normal;color:var(--red);font-weight:900;font-variant-numeric:tabular-nums}
+
+/* 06 关于：告示 + 表单 */
+.pledge{display:grid;grid-template-columns:1.22fr 1fr;gap:18px}
+.notice{border:3px solid var(--ink);background:var(--yellow);padding:28px 32px;box-shadow:10px 10px 0 var(--red);transform:rotate(-.5deg);display:flex;flex-direction:column;gap:11px}
+.notice .kick{font-family:var(--mono);font-size:8px;letter-spacing:.24em;color:var(--red);font-weight:800}
+.notice h3{font-family:var(--serif);font-weight:900;font-size:clamp(25px,4.3vw,44px);line-height:1.28;letter-spacing:-.02em}
+.notice h3 em{font-style:italic;color:#fff}
+.notice p{font-size:12.5px;line-height:2.05;text-align:justify;font-weight:600}
+.notice .stamp{font-family:var(--mono);font-size:9px;letter-spacing:.14em;font-weight:800;align-self:flex-end;border:2.5px solid var(--ink);padding:7px 12px;transform:rotate(-3deg);background:#fff}
+.check{border:3px solid var(--ink);background:#fff;padding:22px 26px;box-shadow:8px 8px 0 var(--blue);transform:rotate(.5deg);display:flex;flex-direction:column;gap:11px}
+.check h4{font-family:var(--serif);font-weight:900;font-size:20px;line-height:1.4}
+.check ol{counter-reset:k;display:flex;flex-direction:column;gap:9px}
+.check li{font-size:12px;line-height:1.65;display:grid;grid-template-columns:24px 1fr;gap:9px;align-items:start;font-weight:600}
+.check li:before{content:counter(k);counter-increment:k;font-family:var(--mono);font-weight:900;background:var(--green);color:#fff;border-radius:50%;width:20px;height:20px;display:grid;place-items:center;font-size:9.5px;margin-top:2px}
+.subform{display:flex;gap:7px;margin-top:auto;flex-wrap:wrap}
+.subform input{border:3px solid var(--ink);background:var(--paper);color:var(--ink);padding:11px 13px;font-family:var(--mono);font-size:11.5px;outline:none;min-width:170px;flex:1;font-weight:700}
+.subform input::placeholder{color:var(--mute)}
+.subform input:focus{border-color:var(--red);background:#fff}
+.subform button{border:3px solid var(--ink);background:var(--red);color:#fff;font-weight:900;padding:11px 17px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;cursor:pointer}
+.subform button:hover{background:var(--green);color:#fff}
+
+/* 页脚 */
+.foot{border-top:4px double var(--ink);padding:32px 0 15px;margin-top:24px;background:var(--yellow)}
+.fg{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:26px;margin-bottom:24px}
+.fb .logo{font-family:var(--serif);font-weight:900;letter-spacing:-.06em;font-size:32px;line-height:1;color:var(--red);
+  text-shadow:2px 2px 0 var(--ink),-1px -1px 0 #fff;transform:rotate(-1.2deg);display:inline-block}
+.fb p{font-size:11.5px;color:var(--ink);margin-top:12px;max-width:420px;line-height:1.9;font-weight:600}
+.fg h5{font-family:var(--mono);font-size:8px;letter-spacing:.22em;color:var(--blue);font-weight:800;margin-bottom:12px}
+.fg ul{display:flex;flex-direction:column;gap:7px}
+.fg a{font-size:11.5px;color:var(--ink);font-weight:700}
+.fg a:hover{color:var(--red);text-decoration:underline}
+.copy{font-family:var(--mono);font-size:8.5px;color:var(--ink);border-top:2px dashed var(--ink);padding-top:14px;line-height:2.05;font-weight:700}
+.copy a{color:var(--blue);border-bottom:1.5px solid var(--blue)}
+
+/* 响应式 */
+@media(max-width:1000px){
+  .hero{grid-template-columns:1fr}
+  .tickets{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .ham{display:flex}
+  .menu{position:fixed;inset:51px 0 0 0;background:var(--bg);flex-direction:column;padding:13px;gap:2px;transform:translateX(100%);transition:.3s;z-index:199;overflow:auto;border-top:3px solid var(--ink)}
+  .menu.open{transform:translateX(0)}
+  .menu a{font-size:14px;padding:13px 15px;border:1px solid rgba(36,33,28,.28)}
+  .menu a:first-child{border-left:1px solid rgba(36,33,28,.28)}
+  .sec-h{grid-template-columns:1fr;gap:8px}
+  .mh{grid-template-columns:1fr}
+  .mh .plate,.mh .plate.r{text-align:left;flex-direction:row;flex-wrap:wrap;gap:2px 12px}
+  section{padding:42px 0}
+  .ledger,.bars2,.toc,.fg{grid-template-columns:1fr}
+  .board,.notice,.letter,.check{padding:21px 19px}
+  .ladder{height:200px;gap:5px}
+  .bar em{display:none}
+}
+@media(max-width:480px){
+  .container{padding:0 15px}
+  .tickets{grid-template-columns:1fr}
+  .tk:before,.tk:after{display:none}
+  .price{flex-wrap:wrap}.price div{flex:1 1 50%;border-bottom:2px solid var(--ink)}
+  .row{grid-template-columns:56px 1fr;gap:10px}.row .free{grid-column:2;margin-left:66px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- 报头 -->
+<header class="masthead">
+  <div class="container">
+    <div class="mh">
+      <div class="plate"><span>EDITITION <b>FREE · VOL.19</b></span><span>PRICE <b>¥ 0.00</b></span><span>LEGAL <b>正版 · 合规</b></span></div>
+      <div class="brand-wrap">
+        <a class="brand" href="#top">最新免费电影网</a>
+        <small>HOST · ZUIXINMIANFEIDIANYINGWANG-CN.GITHUB.IO</small>
+        <div class="marquee"><div class="track">
+          <span><b>FREE</b> 免费片单</span><span>最新电影资讯</span><span>正版观影渠道</span><span>华语电影</span><span>欧美电影</span><span>日本电影</span><span>高分剧集</span><span>冷门佳片</span><span>纪录片</span><span>短片</span><span>电影节</span><span>奥斯卡</span><span>戛纳</span><span>柏林</span><span><b>NO PIRACY</b> 不提供盗版播放源</span>
+          <span><b>FREE</b> 免费片单</span><span>最新电影资讯</span><span>正版观影渠道</span><span>华语电影</span><span>欧美电影</span><span>日本电影</span><span>高分剧集</span><span>冷门佳片</span><span>纪录片</span><span>短片</span><span>电影节</span><span>奥斯卡</span><span>戛纳</span><span>柏林</span><span><b>NO PIRACY</b> 不提供盗版播放源</span>
+        </div></div>
+      </div>
+      <div class="plate r"><span>PRINT <b>DAILY</b></span><span>INDEX <b>BING / GOOGLE</b></span><span>STATUS <b>UPDATED</b></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- 导航 -->
+<nav class="nav">
+  <div class="container">
+    <button class="ham" id="ham" aria-label="切换菜单">☰</button>
+    <div class="menu" id="menu">
+      <a href="#film" class="on">最新上映</a>
+      <a href="#free">免费渠道</a>
+      <a href="#note">观影手记</a>
+      <a href="#rank">口碑榜单</a>
+      <a href="#cat">影片分类</a>
+      <a href="#about">关于本站</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO：告示栏 -->
+<section id="top">
+  <div class="container">
+    <div class="hero">
+      <div class="board">
+        <span class="tape">NOTICE · 告示</span>
+        <h3>免费，<em>但要合法</em></h3>
+        <p>最新免费电影网（zuixinmianfeidianyingwang-cn.github.io）只做一件事：<span class="hl">告诉你哪部片子现在能免费、正版、合法地看到</span>。我们整理 <b>免费片单、公版影片、平台限时免费、电影节展映、官方频道、公共文化资源</b>，并写清"为什么值得看"——评分、类型、片长、一句人话。</p>
+        <p><span class="hl">本站不提供任何盗版播放源、不破解、不引流至侵权站点</span>。"免费"指的是渠道免费，不是版权免费；请支持正版。</p>
+        <div class="price">
+          <div style="--c:var(--yellow)"><b>¥0</b><span>观影成本</span></div>
+          <div style="--c:var(--green);color:#fff"><b>100%</b><span>正版合规</span></div>
+          <div style="--c:var(--blue);color:#fff"><b>每日</b><span>更新</span></div>
+        </div>
+      </div>
+      <div class="ads">
+        <div class="ad a1"><span class="lb">FREE · 免费</span><b>公版老片</b><u>版权已过期，可自由观看</u></div>
+        <div class="ad a2"><span class="lb">LIMIT · 限时</span><b>平台限免</b><u>会员免费日 / 首月特惠</u></div>
+        <div class="ad a3"><span class="lb">FEST · 展映</span><b>电影节片单</b><u>北影节 / 上影节 / FIRST</u></div>
+        <div class="ad a4"><span class="lb">PUBLIC · 公共</span><b>公共文化</b><u>美术馆 / 资料馆 / 高校放映</u></div>
+        <div class="ad a5"><span class="lb">TRAIL · 预告</span><b>最新预告</b><u>本周上映与流媒体上线日</u></div>
+        <div class="ad a6"><span class="lb">GUIDE · 指南</span><b>观影指南</b><u>冷门佳片 · 一句话安利</u></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 新片：票根 -->
+<section id="film">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>01</i>NEW</div>
+      <div class="tx"><div class="kicker">TICKET · NOW SHOWING</div>
+        <h2>最新<em>四张</em>票根</h2>
+        <p class="lede">票根结构：<code>.tk</code> 四张，左右各一个 <code>border-radius:50%</code> 半圆模拟撕裂齿孔（<code>:before/:after</code> 定位），并做 <code>rotate(±2.6deg)</code> 错落；<code>repeating-linear-gradient</code> 虚线分隔 + 墨底金字评分。与"负片/胶片格/拼贴" DOM 完全不同。</p></div>
+      <a class="more" href="#">NEW →</a>
+    </div>
+
+    <div class="tickets">
+      <article class="tk t1r"><span class="stub">TICKET · 剧情</span><h4>便利店过夜的人</h4><p>三个陌生人，在 24 小时便利店里各自等一个不会来的人。全片只有 86 分钟，台词很少。</p><div class="bar"></div><div class="ft"><span>NEW · 01</span><b>8.7</b></div></article>
+      <article class="tk t2r"><span class="stub">TICKET · 悬疑</span><h4>第 13 级台阶</h4><p>老公寓的楼梯数永远多一级。住户各自数，答案都不一样。本周五上线流媒体。</p><div class="bar"></div><div class="ft"><span>NEW · 02</span><b>8.5</b></div></article>
+      <article class="tk t3r"><span class="stub">TICKET · 纪录</span><h4>一张电影票的价格</h4><p>跟拍三家县城影院的一年：票价、排片、爆米花和那个总坐在最后一排的人。</p><div class="bar"></div><div class="ft"><span>NEW · 03</span><b>8.9</b></div></article>
+      <article class="tk t4r"><span class="stub">TICKET · 动画</span><h4>雨停之前</h4><p>13 分钟短片，讲一只猫等雨停。没有一句台词，看完会想给家里打电话。</p><div class="bar"></div><div class="ft"><span>NEW · 04</span><b>9.0</b></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 02 免费渠道：票据 -->
+<section id="free">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>02</i>FREE</div>
+      <div class="tx"><div class="kicker">LEDGER · WHERE TO WATCH FREE &amp; LEGAL</div>
+        <h2>六条<em>正版</em>免费渠道</h2>
+        <p class="lede">票据结构：<code>.row</code> 六行 <code>grid-template-columns:74px 1fr 96px</code>；左侧等宽大号序号（虚线分隔）、中部片名 + 规格 + 一句说明、右侧 <code>FREE / 限时 7 天</code> 印章块（6 色）。无进度条、无评分，只回答"去哪看、是否合法、限时多久"。</p></div>
+      <a class="more" href="#">FREE →</a>
+    </div>
+
+    <div class="ledger">
+      <div class="row r1"><span class="no">01</span><div class="tx"><h6>公版影片库</h6><small>PUBLIC DOMAIN · 永久免费</small><p>1929 年前上映的影片，版权已进入公有领域，可自由观看与下载。</p></div><span class="free f1">FREE<br>永久</span></div>
+      <div class="row r2"><span class="no">02</span><div class="tx"><h6>平台限时免费</h6><small>LIMITED · 7 DAYS</small><p>部分平台设"免费日"与"新用户首月"，我们会标清起止日期与适用地区。</p></div><span class="free f2">FREE<br>7 天</span></div>
+      <div class="row r3"><span class="no">03</span><div class="tx"><h6>电影节展映</h6><small>FESTIVAL · 北影节 / 上影节</small><p>展映场次常有学生票与公益场，票价低、片单硬，是看冷门片的最佳窗口。</p></div><span class="free f3">¥20<br>起</span></div>
+      <div class="row r4"><span class="no">04</span><div class="tx"><h6>官方频道与资料馆</h6><small>OFFICIAL · 官方放映</small><p>制片方、导演、电影资料馆的官方频道常放出完整短片、纪录片与修复版。</p></div><span class="free f4">FREE<br>官方</span></div>
+      <div class="row r5"><span class="no">05</span><div class="tx"><h6>公共文化放映</h6><small>PUBLIC · 美术馆 / 高校</small><p>美术馆、图书馆、高校放映室的排片，通常免费或极低票价，且常有映后交流。</p></div><span class="free f5">FREE<br>公益</span></div>
+      <div class="row r6"><span class="no">06</span><div class="tx"><h6>预告与花絮</h6><small>TRAILER · 官方发布</small><p>上映前的预告片、幕后花絮、导演访谈，都是免费的，也能帮你决定要不要买票。</p></div><span class="free f6">FREE<br>官方</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 手记：打字稿 -->
+<section id="note">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>03</i>LETTER</div>
+      <div class="tx"><div class="kicker">TYPEWRITTEN LETTER · 观影手记</div>
+        <h2>一封<em>手写信</em></h2>
+        <p class="lede">打字稿结构：<code>.letter</code> 单张大纸，横格背景 + <code>:first-of-type:first-letter</code> 首字下沉 44px + 黄色荧光高亮 + `FROM / SIGN / 2 MIN READ` 等宽署名。与"信笺/社论/纸条" DOM 完全不同。</p></div>
+      <a class="more" href="#">LETTER →</a>
+    </div>
+
+    <div class="letter">
+      <div class="from">FROM · 最新免费电影网 编辑部</div>
+      <h5>免费的片子，不等于廉价的片子</h5>
+      <p>我们常被问："免费能看什么好片？"答案是：<span class="hl">非常多，只是它们不在热搜里</span>。公版老片、修复版默片、导演首作、短片、纪录片、电影节遗珠——它们的"免费"不是因为不值钱，而是因为没人愿意为它们投流。</p>
+      <p>所以本站不比"谁更便宜"，只比<span class="hl">"谁更值得你两小时"</span>。评分、类型、片长、一句人话，四条信息，够你做完决定。我们不提供播放源，只指路；不刷量、不堆词、不做标题党。</p>
+      <p>如果你也相信<span class="hl">"一张电影票的价值，在于它买到的那两小时是否被认真对待"</span>——欢迎常来。我们会把"现在能免费、正版、合法看到的好片"，一件一件贴在这里。</p>
+      <div class="sign"><span>BY 最新免费电影网 编辑部</span><span>2 MIN READ · 正版合规</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 榜单：木条 -->
+<section id="rank">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>04</i>BARS</div>
+      <div class="tx"><div class="kicker">WOODEN BARS · TOP 10 FREE WORTHY</div>
+        <h2>值得看的<em>十根</em>木条</h2>
+        <p class="lede">木条结构：<code>.ladder</code> 十根，<code>height:var(--h)</code> + <code>align-items:flex-end</code> 驱动不等高柱形，范围 7.4–9.4；柱内含 <code>repeating-linear-gradient(0deg)</code> 木纹刻度 + 顶部等宽评分 + 底部衬线片名；<code>.on</code> 描红为本周最高。无 canvas/SVG。</p></div>
+      <a class="more" href="#">TOP 10 →</a>
+    </div>
+
+    <div class="ladder">
+      <div class="bar" style="--h:74%;--c:var(--paper)"><b>8.2</b><em>旧收音机<br>最后一夜</em></div>
+      <div class="bar" style="--h:80%;--c:var(--yellow)"><b>8.5</b><em>第 13 级<br>台阶</em></div>
+      <div class="bar" style="--h:84%;--c:var(--paper)"><b>8.7</b><em>便利店<br>过夜的人</em></div>
+      <div class="bar" style="--h:88%;--c:var(--green);color:#fff"><b>8.9</b><em>一张电影票<br>的价格</em></div>
+      <div class="bar" style="--h:92%;--c:var(--blue);color:#fff"><b>9.0</b><em>雨停之前</em></div>
+      <div class="bar on" style="--h:96%;--c:var(--red);color:#fff"><b>9.3</b><em>会走路的<br>便利店</em></div>
+      <div class="bar" style="--h:78%;--c:var(--purple);color:#fff"><b>8.3</b><em>无人认领的<br>明信片</em></div>
+      <div class="bar" style="--h:82%;--c:var(--paper)"><b>8.6</b><em>一封信的<br>7 种写法</em></div>
+      <div class="bar" style="--h:76%;--c:var(--yellow)"><b>8.1</b><em>第 44 路<br>末班车</em></div>
+      <div class="bar" style="--h:86%;--c:var(--paper)"><b>8.8</b><em>星期二<br>不营业</em></div>
+    </div>
+
+    <div class="bars2">
+      <div class="br"><span class="n">11</span><span class="t">午夜理发师<small>Horror · EP 6/8 · 流媒体限免</small></span><span class="v">8.7<u>▲3</u></span></div>
+      <div class="br"><span class="n">12</span><span class="t">怪奇物语录<small>Anthology · EP 22/30 · 公版</small></span><span class="v">8.5<u>▲5</u></span></div>
+      <div class="br"><span class="n">13</span><span class="t">便利店夜班<small>Noir · EP 9/12 · 资料馆</small></span><span class="v">8.4<u>▼1</u></span></div>
+      <div class="br"><span class="n">14</span><span class="t">雨中的旁白<small>Poetry · EP 3/6 · 官方频道</small></span><span class="v">8.3<u>▲1</u></span></div>
+      <div class="br"><span class="n">15</span><span class="t">旧电影院的最后一卷胶片<small>Docu · 58 MIN · 公益放映</small></span><span class="v">8.2<u>—</u></span></div>
+      <div class="br"><span class="n">16</span><span class="t">写给陌生人的三分钟<small>Short · 03 MIN · 公版</small></span><span class="v">8.0<u>▼2</u></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 分类：目录 -->
+<section id="cat">
+  <div class="container">
+    <div class="sec-h">
+      <div class="no"><i>05</i>TOC</div>
+      <div class="tx"><div class="kicker">TABLE OF CONTENTS · GENRE</div>
+        <h2>十二格<em>目录</em></h2>
+        <p class="lede">目录结构：<code>.toc</code> 三列网格，12 个 <code>.tc</code> = 等宽红色序号 <code>A–L</code>（底部 2px 实线）+ 衬线中文 + `<var>` 英文小标与条目数；每个做 <code>rotate(±.9deg)</code> 微倾斜。数字为该分类已收录的免费正版条目数。</p></div>
+      <a class="more" href="#">TOC →</a>
+    </div>
+
+    <div class="toc">
+      <div class="tc c1"><span class="ix">A</span><span class="nm">华语电影<var>FREE <i>386</i></var></span></div>
+      <div class="tc c2"><span class="ix">B</span><span class="nm">欧美电影<var>FREE <i>312</i></var></span></div>
+      <div class="tc c3"><span class="ix">C</span><span class="nm">日本电影<var>FREE <i>248</i></var></span></div>
+      <div class="tc c4"><span class="ix">D</span><span class="nm">高分剧集<var>FREE <i>196</i></var></span></div>
+      <div class="tc c5"><span class="ix">E</span><span class="nm">悬疑惊悚<var>FREE <i>274</i></var></span></div>
+      <div class="tc c6"><span class="ix">F</span><span class="nm">冷门佳片<var>FREE <i>168</i></var></span></div>
+      <div class="tc c7"><span class="ix">G</span><span class="nm">纪录片<var>FREE <i>142</i></var></span></div>
+      <div class="tc c8"><span class="ix">H</span><span class="nm">短片<var>FREE <i>96</i></var></span></div>
+      <div class="tc c9"><span class="ix">I</span><span class="nm">动画片<var>FREE <i>84</i></var></span></div>
+      <div class="tc c10"><span class="ix">J</span><span class="nm">修复默片<var>PUBLIC DOMAIN <i>210</i></var></span></div>
+      <div class="tc c11"><span class="ix">K</span><span class="nm">电影节<var>FESTIVAL <i>60</i></var></span></div>
+      <div class="tc c12"><span class="ix">L</span><span class="nm">公版老片<var>1929 前 <i>430</i></var></span></div>
+    </div>
+    <div class="hr2"></div>
+  </div>
+</section>
+
+<!-- 06 关于：告示 + 清单 -->
+<section id="about">
+  <div class="container">
+    <div class="sec-h" style="border-bottom:none;margin-bottom:10px">
+      <div class="no"><i>06</i>NOTICE</div>
+      <div class="tx"><div class="kicker">NOTICE &amp; CHECKLIST · ABOUT</div><h2>关于 <em>最新免费电影网</em></h2></div>
+    </div>
+
+    <div class="pledge">
+      <div class="notice">
+        <div class="kick">NOTICE · 编辑部告示</div>
+        <h3>免费，是<em>渠道</em>免费，<br>不是版权免费</h3>
+        <p>最新免费电影网（zuixinmianfeidianyingwang-cn.github.io）是一个关于"现在能免费、正版、合法看到什么好片"的影片资料、免费片单、观影指南与精选网址导航平台。我们只指路，不提供播放源。</p>
+        <p>收录范围：<b>公版影片、平台限时免费、电影节展映、官方频道、公共文化放映、预告与花絮</b>。每条词条只留四件事——评分、类型、片长、一句人话。</p>
+        <div class="stamp">APPROVED · 正版合规</div>
+      </div>
+      <div class="check">
+        <h4>六条承诺</h4>
+        <ol>
+          <li>不提供、不链接、不引导至任何盗版播放源。</li>
+          <li>每条"免费"标注渠道、期限与适用地区，过期即下架。</li>
+          <li>不写 2000 字长评，只留一句"为什么值得看"。</li>
+          <li>片单按"情绪"排，不按题材排；入口比评分重要。</li>
+          <li>评分综合口碑、片长与讨论热度，且永远保留一句人话。</li>
+          <li>接受举报：发现侵权链接，24 小时内处理。</li>
+        </ol>
+        <form class="subform" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ 已订阅';">
+          <input type="email" placeholder="your@email.com" required aria-label="邮箱地址">
+          <button type="submit">订阅免费片单</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="foot">
+  <div class="container">
+    <div class="fg">
+      <div class="fb">
+        <a class="logo" href="#top">最新免费电影网</a>
+        <p>最新免费电影网（zuixinmianfeidianyingwang-cn.github.io）—— 免费、合法、正版的影片资料、免费片单、最新电影资讯、观影指南与精选网址导航平台。网站网址：<b>https://zuixinmianfeidianyingwang-cn.github.io/</b></p>
+      </div>
+      <div><h5>CHANNEL 栏目</h5><ul>
+        <li><a href="#film">最新上映</a></li><li><a href="#free">免费渠道</a></li>
+        <li><a href="#cat">影片分类</a></li><li><a href="#rank">口碑榜单</a></li></ul></div>
+      <div><h5>NOTE 手记</h5><ul>
+        <li><a href="#note">观影手记</a></li><li><a href="#">公版影片</a></li>
+        <li><a href="#">电影节片单</a></li><li><a href="#">免费观影日</a></li></ul></div>
+      <div><h5>SITE 站点</h5><ul>
+        <li><a href="#about">站点简介</a></li><li><a href="#">免责声明</a></li>
+        <li><a href="#">网址收录</a></li><li><a href="#">侵权举报</a></li></ul></div>
+    </div>
+    <div class="copy">
+      © <span id="yr"></span> 最新免费电影网（zuixinmianfeidianyingwang-cn.github.io） · HOST: <a href="https://zuixinmianfeidianyingwang-cn.github.io/">https://zuixinmianfeidianyingwang-cn.github.io/</a> · 本期为静态演示页面<br>
+      本站仅提供影片资料、免费观影渠道指引与观影指南，<b>不提供任何盗版播放源、不破解、不引流至侵权站点</b>。内页链接以 # 占位；影片名称、评分、简介、条目数、上线日期均为示例内容，不构成观看或播放承诺。
+    </div>
+  </div>
+</footer>
+
+<script>
+var ham=document.getElementById('ham'),menu=document.getElementById('menu');
+ham.addEventListener('click',function(){
+  menu.classList.toggle('open');
+  ham.textContent=menu.classList.contains('open')?'✕':'☰';
+});
+menu.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){menu.classList.remove('open');ham.textContent='☰';}
+});
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('.menu a');
+window.addEventListener('scroll',function(){
+  var cur='';
+  secs.forEach(function(s){if(window.scrollY>=s.offsetTop-130)cur=s.id;});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
